@@ -28,6 +28,13 @@ async function checkWeather(city) {
   }
 }
 let city = document.querySelector(".inp");
+// added enter functiionality
+city.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    checkWeather(city.value);
+    city.value = "";
+  }
+});  
 
 let btn = document.querySelector(".btn");
 btn.addEventListener("click", () => {
