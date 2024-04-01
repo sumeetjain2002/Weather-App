@@ -11,12 +11,12 @@ body {
 }
 .card {
   width: 90%;
-  max-width: 470px;
-  background: linear-gradient(135deg, #00feba, #5b548a);
+  /* max-width: 470px; */
+  background: midnightblue;
   border-radius: 20px;
   color: whitesmoke;
 
-  margin: 100px auto ;
+  margin: 10px auto;
   padding: 40px 35px;
   text-align: center;
 }
@@ -102,4 +102,14 @@ body {
 .wind {
   font-size: 28px;
   margin-top: 6px;
+}
+
+#bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h3 {
+  margin-top: 10px;
 }
