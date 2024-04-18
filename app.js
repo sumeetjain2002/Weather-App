@@ -17,17 +17,11 @@ app.post("/", async (req, res) => {
   let { city } = req.body;
   console.log(city);
 
-     const a= await axios(url1 + `&q=${city}` + `&cnt=5` + `&appid=${apiId}`)
- 
-      console.log(a.data.list);
-      // a.then(response=>
-      // {
-      //   console.log(response.json())
-      // })
- 
-    
-
-  res.send("ha ja raaha");
+     let a= await axios(url1 + `&q=${city}` + `&cnt=5` + `&appid=${apiId}`)
+    a=JSON.stringify(a.data);
+    console.log(a);
+    res.send(a);
+     
 });
 
 app.listen(PORT, () => {

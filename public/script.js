@@ -3,15 +3,10 @@ const url = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 const url1 = "https://api.openweathermap.org/data/2.5/forecast?units=metric";
 
 async function checkWeather(city) {
-  const { ans } = await axios.post("/", {
-    city,
+  const { data } = await axios.post("/", {
+    city
   });
-
-  const response = await fetch(
-    url1 + `&q=${city}` + `&cnt=5` + `&appid=${apiId}`
-  );
-  var data = await response.json();
-  console.log(data);
+  console.log(data+"mydata script ka")
   document.querySelector(".city").innerText = data.city.name;
   document.querySelector(".temp").innerText = data.list[0].main.temp + " °С";
   document.querySelector(".humidity").innerText =
